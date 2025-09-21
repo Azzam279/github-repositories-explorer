@@ -18,7 +18,7 @@ describe('SearchForm', () => {
 
   it('renders input and button', () => {
     render(<SearchForm />);
-    expect(screen.getByLabelText(/search/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/Enter username/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /search/i })).toBeInTheDocument();
   });
 
@@ -31,7 +31,7 @@ describe('SearchForm', () => {
 
   it('calls setUsername with trimmed value on submit', async () => {
     render(<SearchForm />);
-    const input = screen.getByLabelText(/search/i);
+    const input = screen.getByLabelText(/Enter username/i);
     fireEvent.change(input, { target: { value: '  octocat  ' } });
     fireEvent.click(screen.getByRole('button', { name: /search/i }));
 
