@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import { screen, fireEvent, waitFor } from '@testing-library/dom';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { vi, describe, it, beforeEach, expect, type Mock } from 'vitest';
-import * as reactQuery from 'react-query';
+import * as reactQuery from '@tanstack/react-query';
 import '@testing-library/jest-dom';
 import Repository, { fetchRepos } from '../../components/Repository';
 import githubService from '../../api/services/github-service';

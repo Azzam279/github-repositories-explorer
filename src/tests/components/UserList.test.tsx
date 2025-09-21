@@ -1,6 +1,6 @@
 import type { ComponentType } from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { vi, describe, it, beforeEach, expect, type Mock } from 'vitest';
 import '@testing-library/jest-dom';
 import { fetchUsers } from '../../components/UserList';
@@ -63,8 +63,8 @@ describe('UserList', () => {
     useQueryMock.mockReset();
 
     // Mock react-query ONLY for this block
-    vi.doMock('react-query', async () => {
-      const actual = await vi.importActual<ComponentType>('react-query');
+    vi.doMock('@tanstack/react-query', async () => {
+      const actual = await vi.importActual<ComponentType>('@tanstack/react-query');
       return {
         ...actual,
         useQuery: (...args: unknown[]) => useQueryMock(...args),

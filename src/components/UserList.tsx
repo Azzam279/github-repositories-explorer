@@ -1,5 +1,5 @@
 
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { useGithubStore } from '../stores/github';
 import Skeleton from '@mui/material/Skeleton';
 import Repository from './Repository';
