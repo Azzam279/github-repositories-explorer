@@ -25,7 +25,7 @@ yarn -v
 
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/your-username/github-repositories-explorer.git
+git clone https://github.com/Azzam279/github-repositories-explorer.git
 cd github-repositories-explorer
 
 # using npm
