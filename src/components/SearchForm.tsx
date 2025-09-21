@@ -15,7 +15,7 @@ export default function SearchForm() {
   return (
     <form className="search-form" onSubmit={handleSubmit(onSubmit)}>
       <TextField
-        label="Search"
+        label="Enter username"
         variant="outlined"
         className="search-field"
         fullWidth
